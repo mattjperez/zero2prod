@@ -47,7 +47,7 @@ jobs:
           components: clippy
       - uses: actions-rs/clippy-check@v1
         with:
-          token: ${{ secrets.Z2P_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           args: -- -D warnings
 
   coverage:
