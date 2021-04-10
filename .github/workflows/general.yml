@@ -29,7 +29,7 @@ jobs:
         run: |
           sudo apt-get install libpq-dev -y
           cargo install --version=0.5.1 sqlx-cli --no-default-features --features postgres
-          SKIP_DOCKER=true ./scripts/init_DB.sh
+          SKIP_DOCKER=true ./scripts/init_db.sh
       - uses: actions-rs/cargo@v1
         with:
           command: test
@@ -104,7 +104,7 @@ jobs:
         run: |
           sudo apt-get install libpq-dev -y
           cargo install --version=0.5.1 sqlx-cli --no-default-features --features postgres
-          SKIP_DOCKER=true ./scripts/init_DB.sh
+          SKIP_DOCKER=true ./scripts/init_db.sh
 
       - name: Run cargo-tarpaulin
         uses: actions-rs/tarpaulin@v0.1
